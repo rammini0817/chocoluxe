@@ -1,6 +1,7 @@
 import { motion, useMotionValue, useSpring, useTransform, useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
 import heroChocolate from "@/assets/hero-chocolate.jpg";
+import { MagneticLink } from "./Magnetic";
 
 function Particles() {
   const dots = Array.from({ length: 28 });
