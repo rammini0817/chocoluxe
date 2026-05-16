@@ -7,6 +7,9 @@ import { Story } from "@/components/site/Story";
 import { Testimonials } from "@/components/site/Testimonials";
 import { Reels } from "@/components/site/Reels";
 import { CtaFooter } from "@/components/site/CtaFooter";
+import { ScrollEffects } from "@/components/site/ScrollEffects";
+import { CursorGlow } from "@/components/site/CursorGlow";
+import { ChocolateDrip } from "@/components/site/ChocolateDrip";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -30,10 +33,14 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main className="relative">
+      <CursorGlow />
+      <ScrollEffects />
       <Navbar />
       <Hero />
+      <ChocolateDrip />
       <Flavors />
       <GiftBoxes />
+      <ChocolateDrip />
       <Story />
       <Testimonials />
       <Reels />
