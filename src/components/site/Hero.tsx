@@ -120,7 +120,7 @@ export function Hero() {
           </MagneticLink>
         </motion.div>
 
-        {/* Floating chocolate */}
+        {/* Floating 3D chocolate scene */}
         <motion.div
           style={{ y: parallaxY }}
           className="relative mt-16 [perspective:1200px]"
@@ -132,26 +132,21 @@ export function Hero() {
             className="relative w-[min(80vw,640px)] aspect-[4/3] rounded-3xl overflow-hidden shadow-luxe ring-1 ring-gold/20"
           >
             <div className="absolute -inset-10 bg-[radial-gradient(circle_at_50%_50%,oklch(0.78_0.13_78/0.35),transparent_60%)] blur-2xl" />
+            {/* Fallback image (shown until Spline loads / on reduced motion) */}
             <img
               src={heroChocolate}
               alt="Handcrafted luxury chocolate box"
               width={1536}
               height={1024}
-              className="relative w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+            {/* Spline 3D scene: floating chocolate cubes, rotating gift box */}
+            <div className="absolute inset-0">
+              <SplineScene />
+            </div>
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
           </motion.div>
         </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 1 }}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[10px] tracking-[0.4em] uppercase text-foreground/40"
-        >
-          Scroll to taste
-        </motion.div>
-      </motion.div>
     </section>
   );
 }
