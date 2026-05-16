@@ -147,6 +147,16 @@ export function Hero() {
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
           </motion.div>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2, duration: 1 }}
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[10px] tracking-[0.4em] uppercase text-foreground/40"
+        >
+          Scroll to taste
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
