@@ -103,20 +103,20 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 1.4 }}
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
-          <a
+          <MagneticLink
             href="#flavors"
-            className="group relative inline-flex items-center gap-3 rounded-full bg-gold px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-glow hover:scale-[1.03] transition-transform"
+            className="group relative inline-flex items-center gap-3 rounded-full bg-gold px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-glow"
           >
             Explore Flavors
             <span className="transition-transform group-hover:translate-x-1">→</span>
-          </a>
-          <a
+          </MagneticLink>
+          <MagneticLink
             href="#cta"
             className="inline-flex items-center gap-3 rounded-full glass px-7 py-3.5 text-sm font-medium hover:border-gold/40 transition-all"
           >
             <span className="h-2 w-2 rounded-full bg-gold animate-pulse" />
             Launching Soon
-          </a>
+          </MagneticLink>
         </motion.div>
 
         {/* Floating chocolate */}
