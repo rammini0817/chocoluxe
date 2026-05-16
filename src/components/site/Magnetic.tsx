@@ -1,4 +1,4 @@
-import { useRef, type ReactNode, type MouseEvent, type AnchorHTMLAttributes, type ButtonHTMLAttributes } from "react";
+import { useRef, type ReactNode, type MouseEvent } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 function useMagnet(strength: number) {
@@ -22,17 +22,19 @@ function useMagnet(strength: number) {
   return { ref, sx, sy, move, leave };
 }
 
-type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+interface MagneticLinkProps {
   children: ReactNode;
+  href?: string;
+  className?: string;
   strength?: number;
-};
+}
 
-export function MagneticLink({ children, strength = 0.25, className, ...rest }: AnchorProps) {
+export function MagneticLink({ children, href, className, strength = 0.25 }: MagneticLinkProps) {
   const { ref, sx, sy, move, leave } = useMagnet(strength);
   return (
     <motion.a
-      {...rest}
       ref={ref as never}
+      href={href}
       data-magnetic
       onMouseMove={move}
       onMouseLeave={leave}
@@ -44,17 +46,27 @@ export function MagneticLink({ children, strength = 0.25, className, ...rest }: 
   );
 }
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+interface MagneticButtonProps {
   children: ReactNode;
+  className?: string;
+  type?: "button" | "submit";
+  onClick?: () => void;
   strength?: number;
-};
+}
 
-export function MagneticButton({ children, strength = 0.25, className, ...rest }: ButtonProps) {
+export function MagneticButton({
+  children,
+  className,
+  type = "button",
+  onClick,
+  strength = 0.25,
+}: MagneticButtonProps) {
   const { ref, sx, sy, move, leave } = useMagnet(strength);
   return (
     <motion.button
-      {...rest}
       ref={ref as never}
+      type={type}
+      onClick={onClick}
       data-magnetic
       onMouseMove={move}
       onMouseLeave={leave}
