@@ -2,6 +2,7 @@ import { motion, useMotionValue, useSpring, useTransform, useScroll } from "fram
 import { useEffect, useRef } from "react";
 import heroChocolate from "@/assets/hero-chocolate.jpg";
 import { MagneticLink } from "./Magnetic";
+import { SplineScene } from "./SplineScene";
 
 function Particles() {
   const dots = Array.from({ length: 28 });
