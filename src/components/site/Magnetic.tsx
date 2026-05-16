@@ -1,26 +1,8 @@
-import { useRef, type ReactNode, type MouseEvent } from "react";
+import { useRef, type ReactNode, type MouseEvent, type AnchorHTMLAttributes, type ButtonHTMLAttributes } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
-interface MagneticProps {
-  children: ReactNode;
-  className?: string;
-  strength?: number;
-  as?: "div" | "a" | "button";
-  href?: string;
-  onClick?: () => void;
-  type?: "button" | "submit";
-}
-
-export function Magnetic({
-  children,
-  className,
-  strength = 0.25,
-  as = "div",
-  href,
-  onClick,
-  type,
-}: MagneticProps) {
-  const ref = useRef<HTMLElement>(null);
+function useMagnet(strength: number) {
+  const ref = useRef<HTMLElement | null>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const sx = useSpring(x, { stiffness: 200, damping: 18, mass: 0.4 });
@@ -37,22 +19,49 @@ export function Magnetic({
     x.set(0);
     y.set(0);
   };
+  return { ref, sx, sy, move, leave };
+}
 
-  const Comp = motion[as] as typeof motion.div;
+type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+  children: ReactNode;
+  strength?: number;
+};
 
+export function MagneticLink({ children, strength = 0.25, className, ...rest }: AnchorProps) {
+  const { ref, sx, sy, move, leave } = useMagnet(strength);
   return (
-    <Comp
+    <motion.a
+      {...rest}
       ref={ref as never}
       data-magnetic
-      href={href}
-      onClick={onClick}
-      type={type}
       onMouseMove={move}
       onMouseLeave={leave}
       style={{ x: sx, y: sy }}
       className={className}
     >
       {children}
-    </Comp>
+    </motion.a>
+  );
+}
+
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  children: ReactNode;
+  strength?: number;
+};
+
+export function MagneticButton({ children, strength = 0.25, className, ...rest }: ButtonProps) {
+  const { ref, sx, sy, move, leave } = useMagnet(strength);
+  return (
+    <motion.button
+      {...rest}
+      ref={ref as never}
+      data-magnetic
+      onMouseMove={move}
+      onMouseLeave={leave}
+      style={{ x: sx, y: sy }}
+      className={className}
+    >
+      {children}
+    </motion.button>
   );
 }
