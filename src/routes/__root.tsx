@@ -72,14 +72,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Chocoluxe" },
+      { name: "description", content: "A premium homemade chocolate brand crafted for gifting, celebrations, and unforgettable sweet moments.
+ChocoLuxe blends rich handcrafted flavors with elegant pr" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Chocoluxe" },
+      { property: "og:description", content: "A premium homemade chocolate brand crafted for gifting, celebrations, and unforgettable sweet moments.
+ChocoLuxe blends rich handcrafted flavors with elegant pr" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Chocoluxe" },
+      { name: "twitter:description", content: "A premium homemade chocolate brand crafted for gifting, celebrations, and unforgettable sweet moments.
+ChocoLuxe blends rich handcrafted flavors with elegant pr" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0c9cdfb7-bb58-4368-91e2-4f57234b68da/id-preview-6ee7790f--c5fcfcf3-38c4-4971-827e-b608997a38d6.lovable.app-1778915972915.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0c9cdfb7-bb58-4368-91e2-4f57234b68da/id-preview-6ee7790f--c5fcfcf3-38c4-4971-827e-b608997a38d6.lovable.app-1778915972915.png" },
     ],
     links: [
       {
