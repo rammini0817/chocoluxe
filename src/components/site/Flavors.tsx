@@ -17,40 +17,40 @@ export function Flavors() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
-            <span className="text-xs tracking-[0.4em] uppercase text-gold/80">01 — La Collection</span>
-            <h2 className="mt-4 font-display text-5xl md:text-7xl tracking-tight">
+            <span data-reveal className="text-xs tracking-[0.4em] uppercase text-gold/80">01 — La Collection</span>
+            <h2 data-reveal className="mt-4 font-display text-5xl md:text-7xl tracking-tight">
               Featured <span className="italic text-gradient-gold">Flavors</span>
             </h2>
           </div>
-          <p className="max-w-md text-foreground/70 font-light">
+          <p data-reveal className="max-w-md text-foreground/70 font-light">
             Each piece is hand-finished in our atelier — small batches, slow tempering, single-origin beans.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div data-reveal-group className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {flavors.map((f, i) => (
             <motion.article
               key={f.name}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.8, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              data-reveal-item
               whileHover={{ y: -8 }}
+              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
               className="group relative rounded-2xl glass overflow-hidden"
             >
               <div className="relative aspect-[4/5] overflow-hidden">
-                <motion.img
+                <img
                   src={f.img}
                   alt={f.name}
                   width={1024}
                   height={1280}
                   loading="lazy"
+                  data-img-zoom
                   className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
                 <div className="absolute top-4 left-4 text-[10px] tracking-[0.3em] uppercase text-gold/90">
                   No. 0{i + 1}
                 </div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_var(--mx,50%)_var(--my,50%),oklch(0.78_0.13_78/0.25),transparent_60%)]" />
               </div>
               <div className="p-6">
                 <div className="flex items-baseline justify-between gap-3">

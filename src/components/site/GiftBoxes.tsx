@@ -26,23 +26,22 @@ export function GiftBoxes() {
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="text-xs tracking-[0.4em] uppercase text-gold/80">02 — The Atelier</span>
-          <h2 className="mt-4 font-display text-5xl md:text-7xl tracking-tight">
+          <span data-reveal className="text-xs tracking-[0.4em] uppercase text-gold/80">02 — The Atelier</span>
+          <h2 data-reveal className="mt-4 font-display text-5xl md:text-7xl tracking-tight">
             Luxury <span className="italic text-gradient-gold">Gift Boxes</span>
           </h2>
-          <p className="mt-6 text-foreground/70 font-light">
+          <p data-reveal className="mt-6 text-foreground/70 font-light">
             Composed by hand, sealed with wax, delivered in velvet. A keepsake worth as much as what's inside.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {boxes.map((b, i) => (
+        <div data-reveal-group className="grid lg:grid-cols-3 gap-8">
+          {boxes.map((b) => (
             <motion.div
               key={b.name}
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.9, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
+              data-reveal-item
+              whileHover={{ y: -10 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               className="group relative"
             >
               <div className="relative aspect-square rounded-3xl overflow-hidden mb-6 noise">
@@ -52,6 +51,7 @@ export function GiftBoxes() {
                   width={1280}
                   height={1280}
                   loading="lazy"
+                  data-img-zoom
                   className="w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/70 to-transparent" />
