@@ -82,8 +82,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Chocoluxe" },
       { name: "twitter:description", content: "A premium homemade chocolate brand crafted for gifting, celebrations, and unforgettable sweet moments. ChocoLuxe blends rich handcrafted flavors with elegant pr" },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0c9cdfb7-bb58-4368-91e2-4f57234b68da/id-preview-6ee7790f--c5fcfcf3-38c4-4971-827e-b608997a38d6.lovable.app-1778915972915.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0c9cdfb7-bb58-4368-91e2-4f57234b68da/id-preview-6ee7790f--c5fcfcf3-38c4-4971-827e-b608997a38d6.lovable.app-1778915972915.png" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/b37c4b63-101b-4ca4-9cb6-1f3602618ad7" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/b37c4b63-101b-4ca4-9cb6-1f3602618ad7" },
     ],
     links: [
       {
