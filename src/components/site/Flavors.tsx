@@ -17,17 +17,17 @@ export function Flavors() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
-            <span className="text-xs tracking-[0.4em] uppercase text-gold/80">01 — La Collection</span>
-            <h2 className="mt-4 font-display text-5xl md:text-7xl tracking-tight">
+            <span data-reveal className="text-xs tracking-[0.4em] uppercase text-gold/80">01 — La Collection</span>
+            <h2 data-reveal className="mt-4 font-display text-5xl md:text-7xl tracking-tight">
               Featured <span className="italic text-gradient-gold">Flavors</span>
             </h2>
           </div>
-          <p className="max-w-md text-foreground/70 font-light">
+          <p data-reveal className="max-w-md text-foreground/70 font-light">
             Each piece is hand-finished in our atelier — small batches, slow tempering, single-origin beans.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div data-reveal-group className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {flavors.map((f, i) => (
             <motion.article
               key={f.name}
