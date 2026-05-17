@@ -21,7 +21,7 @@ export function Reels() {
               Follow the <span className="italic text-gradient-gold">craft</span>
             </h2>
           </div>
-          <a data-reveal href="#" className="text-sm text-gold hover:underline underline-offset-4">@maisoncocoa →</a>
+          <a data-reveal href="#" className="text-sm text-gold hover:underline underline-offset-4">@chocoluxe →</a>
         </div>
 
         <div data-reveal-group className="grid grid-cols-2 md:grid-cols-4 gap-4">

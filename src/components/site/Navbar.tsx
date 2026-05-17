@@ -17,7 +17,7 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-5 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group">
-          <span className="font-display text-2xl tracking-wide text-gradient-gold">Maison Cocoa</span>
+          <span className="font-display text-2xl tracking-wide text-gradient-gold"><img src="favicon.ico" /></span>
         </a>
         <nav className="hidden md:flex items-center gap-10 text-sm text-foreground/80">
           {links.map((l) => (

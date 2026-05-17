@@ -41,13 +41,13 @@ export function CtaFooter() {
         </div>
 
         <div className="mt-32 pt-10 border-t border-border/50 flex flex-col md:flex-row gap-6 items-center justify-between text-xs text-foreground/50">
-          <div className="font-display text-xl text-gradient-gold">Maison Cocoa</div>
+          <div className="font-display text-xl text-gradient-gold"><img src="favicon.ico" /></div>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-gold transition-colors">Instagram</a>
+            <a href="https://www.instagram.com/chocoluxe_homemade/" className="hover:text-gold transition-colors">Instagram</a>
             <a href="#" className="hover:text-gold transition-colors">Press</a>
-            <a href="#" className="hover:text-gold transition-colors">Contact</a>
+            <a href="https://wa.me/+917987287686" className="hover:text-gold transition-colors">Contact</a>
           </div>
-          <div>© {new Date().getFullYear()} Maison Cocoa — Lyon, France</div>
+          <div>© {new Date().getFullYear()} ChocoLuxe — Jaora,India</div>
         </div>
       </div>
     </footer>

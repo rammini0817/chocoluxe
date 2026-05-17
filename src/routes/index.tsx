@@ -15,13 +15,13 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Maison Cocoa — Handcrafted Luxury Chocolate" },
+      { title: "ChocoLuxe — Handcrafted Luxury Chocolate" },
       {
         name: "description",
         content:
           "Luxury homemade chocolates crafted for gifting and unforgettable experiences. Single-origin cacao, hand-finished in our Lyon atelier.",
       },
-      { property: "og:title", content: "Maison Cocoa — Handcrafted Luxury Chocolate" },
+      { property: "og:title", content: "ChocoLuxe — Handcrafted Luxury Chocolate" },
       {
         property: "og:description",
         content: "Luxury homemade chocolates, hand-finished. Reserve your first box.",

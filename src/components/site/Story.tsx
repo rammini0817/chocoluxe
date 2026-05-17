@@ -25,7 +25,7 @@ export function Story() {
           </h2>
           <div data-reveal-group className="mt-8 space-y-5 text-foreground/75 font-light leading-relaxed">
             <p data-reveal-item>
-              Born in a tiny kitchen in Lyon, Maison Cocoa began as a Sunday ritual — two hands,
+              Born in a tiny kitchen in Lyon, ChocoLuxe began as a Sunday ritual — two hands,
               one marble slab, and the quiet patience of tempered chocolate finding its shine.
             </p>
             <p data-reveal-item>
